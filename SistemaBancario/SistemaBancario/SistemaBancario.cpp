@@ -138,12 +138,58 @@ int main()
         }
 
         case 4:
-            cout << "Opcion seleccionada: Mostrar clientes en espera." << endl;
+        {
+            if (clientesEspera.empty())
+            {
+                cout << "No hay clientes en espera." << endl;
+            }
+            else
+            {
+                queue<Cliente> colaTemporal = clientesEspera;
+
+                cout << "====================================" << endl;
+                cout << "        CLIENTES EN ESPERA           " << endl;
+                cout << "====================================" << endl;
+
+                while (!colaTemporal.empty())
+                {
+                    Cliente cliente = colaTemporal.front();
+
+                    cout << "Turno: " << cliente.turno << endl;
+                    cout << "Nombre: " << cliente.nombre << endl;
+                    cout << "Tramite: " << cliente.tramite << endl;
+                    cout << "------------------------------------" << endl;
+
+                    colaTemporal.pop();
+                }
+            }
+
             break;
+        }
 
         case 5:
-            cout << "Opcion seleccionada: Mostrar historial de atendidos." << endl;
+        {
+            if (historialAtendidos.empty())
+            {
+                cout << "No hay clientes atendidos." << endl;
+            }
+            else
+            {
+                cout << "====================================" << endl;
+                cout << "       HISTORIAL DE ATENDIDOS        " << endl;
+                cout << "====================================" << endl;
+
+                for (const Cliente& cliente : historialAtendidos)
+                {
+                    cout << "Turno: " << cliente.turno << endl;
+                    cout << "Nombre: " << cliente.nombre << endl;
+                    cout << "Tramite: " << cliente.tramite << endl;
+                    cout << "------------------------------------" << endl;
+                }
+            }
+
             break;
+        }
 
         case 6:
             cout << "Saliendo del sistema..." << endl;
