@@ -2,12 +2,13 @@
  * @file SistemaBancario.cpp
  * @brief Sistema de gestion de turnos para una sucursal bancaria.
  * @author Angel Teran
- * @version 0.3
+ * @version 0.5
  */
 
 #include <iostream>
 #include <string>
 #include <queue>
+#include <vector>
 
 using namespace std;
 
@@ -36,6 +37,7 @@ int main()
     int siguienteTurno = 1;
 
     queue<Cliente> clientesEspera;
+    vector<Cliente> historialAtendidos;
 
     do
     {
@@ -107,8 +109,33 @@ int main()
         }
 
         case 3:
-            cout << "Opcion seleccionada: Atender siguiente cliente." << endl;
+        {
+            if (clientesEspera.empty())
+            {
+                cout << "No hay clientes en espera para atender." << endl;
+            }
+            else
+            {
+                Cliente clienteAtendido = clientesEspera.front();
+
+                clientesEspera.pop();
+
+                historialAtendidos.push_back(clienteAtendido);
+
+                cout << "====================================" << endl;
+                cout << "          CLIENTE ATENDIDO           " << endl;
+                cout << "====================================" << endl;
+
+                cout << "Turno: " << clienteAtendido.turno << endl;
+                cout << "Nombre: " << clienteAtendido.nombre << endl;
+                cout << "Tramite: " << clienteAtendido.tramite << endl;
+
+                cout << endl;
+                cout << "Cliente atendido correctamente." << endl;
+            }
+
             break;
+        }
 
         case 4:
             cout << "Opcion seleccionada: Mostrar clientes en espera." << endl;
