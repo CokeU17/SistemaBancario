@@ -2,13 +2,14 @@
  * @file SistemaBancario.cpp
  * @brief Sistema de gestion de turnos para una sucursal bancaria.
  * @author Angel Teran
- * @version 0.5
+ * @version 0.7
  */
 
 #include <iostream>
 #include <string>
 #include <queue>
 #include <vector>
+#include <limits>
 
 using namespace std;
 
@@ -26,8 +27,8 @@ public:
 /**
  * @brief Funcion principal del programa.
  *
- * Permite registrar clientes y administrar el menu principal
- * del sistema bancario.
+ * Permite registrar clientes, consultar la fila de espera,
+ * atender clientes y almacenar un historial de atendidos.
  *
  * @return 0 si el programa finaliza correctamente.
  */
@@ -54,7 +55,15 @@ int main()
 
         cout << endl;
         cout << "Selecciona una opcion: ";
-        cin >> opcion;
+
+        // Validacion para evitar que letras o simbolos rompan cin
+        while (!(cin >> opcion))
+        {
+            cout << "Que crees que haces chico?, ingresa un dato valido, 1 al 6: ";
+
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
 
         cout << endl;
 
@@ -64,16 +73,36 @@ int main()
         {
             Cliente nuevoCliente;
 
-            cin.ignore();
+            // Limpiar el salto de linea pendiente del cin anterior
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-            cout << "Nombre del cliente: ";
-            getline(cin, nuevoCliente.nombre);
+            // Validar nombre vacio
+            do
+            {
+                cout << "Nombre del cliente: ";
+                getline(cin, nuevoCliente.nombre);
 
-            cout << "Tipo de tramite: ";
-            getline(cin, nuevoCliente.tramite);
+                if (nuevoCliente.nombre.empty())
+                {
+                    cout << "El nombre no puede estar vacio." << endl;
+                }
+
+            } while (nuevoCliente.nombre.empty());
+
+            // Validar tramite vacio
+            do
+            {
+                cout << "Tipo de tramite: ";
+                getline(cin, nuevoCliente.tramite);
+
+                if (nuevoCliente.tramite.empty())
+                {
+                    cout << "El tramite no puede estar vacio." << endl;
+                }
+
+            } while (nuevoCliente.tramite.empty());
 
             nuevoCliente.turno = siguienteTurno;
-
             siguienteTurno++;
 
             clientesEspera.push(nuevoCliente);
@@ -145,6 +174,7 @@ int main()
             }
             else
             {
+                // Se crea una copia para recorrerla sin modificar la cola real
                 queue<Cliente> colaTemporal = clientesEspera;
 
                 cout << "====================================" << endl;
