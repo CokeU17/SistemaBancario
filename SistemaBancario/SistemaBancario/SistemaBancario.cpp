@@ -2,7 +2,7 @@
  * @file SistemaBancario.cpp
  * @brief Sistema de gestion de turnos para una sucursal bancaria.
  * @author Angel Teran
- * @version 0.8
+ * @version 1.0
  */
 
 #include <iostream>

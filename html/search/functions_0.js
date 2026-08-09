@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../_sistema_bancario_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'SistemaBancario.cpp']]]
+  ['atendercliente_0',['atenderCliente',['../_sistema_bancario_8cpp.html#a4d395824ecc382f392e015a34e8f5c6a',1,'SistemaBancario.cpp']]]
 ];

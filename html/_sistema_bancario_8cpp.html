@@ -135,14 +135,54 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a943cf57acd8c7a171b1f0492bcceadd1" id="r_a943cf57acd8c7a171b1f0492bcceadd1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a943cf57acd8c7a171b1f0492bcceadd1">registrarCliente</a> (queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;clientesEspera, int &amp;siguienteTurno)</td></tr>
+<tr class="memdesc:a943cf57acd8c7a171b1f0492bcceadd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra un nuevo cliente y lo agrega a la cola de espera.  <br /></td></tr>
+<tr class="memitem:ab620b80c78cbfa2ba5415a7e5a72b8fd" id="r_ab620b80c78cbfa2ba5415a7e5a72b8fd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab620b80c78cbfa2ba5415a7e5a72b8fd">verSiguienteCliente</a> (const queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;clientesEspera)</td></tr>
+<tr class="memdesc:ab620b80c78cbfa2ba5415a7e5a72b8fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra al primer cliente de la cola sin eliminarlo.  <br /></td></tr>
+<tr class="memitem:a4d395824ecc382f392e015a34e8f5c6a" id="r_a4d395824ecc382f392e015a34e8f5c6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4d395824ecc382f392e015a34e8f5c6a">atenderCliente</a> (queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;clientesEspera, vector&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;historialAtendidos)</td></tr>
+<tr class="memdesc:a4d395824ecc382f392e015a34e8f5c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atiende al primer cliente de la cola y lo guarda en el historial.  <br /></td></tr>
+<tr class="memitem:a9a206e6dbaa92764d6197d5fc8bfa47a" id="r_a9a206e6dbaa92764d6197d5fc8bfa47a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9a206e6dbaa92764d6197d5fc8bfa47a">mostrarClientesEspera</a> (const queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;clientesEspera)</td></tr>
+<tr class="memdesc:a9a206e6dbaa92764d6197d5fc8bfa47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra todos los clientes que permanecen en espera.  <br /></td></tr>
+<tr class="memitem:a8365bc68f9d39de6307c2bd59ecbfc91" id="r_a8365bc68f9d39de6307c2bd59ecbfc91"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8365bc68f9d39de6307c2bd59ecbfc91">mostrarHistorial</a> (const vector&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;historialAtendidos)</td></tr>
+<tr class="memdesc:a8365bc68f9d39de6307c2bd59ecbfc91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Muestra el historial de clientes atendidos.  <br /></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcion principal del programa.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sistema de gestion de turnos para una sucursal bancaria. </p>
 <dl class="section author"><dt>Author</dt><dd>Angel Teran </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.7 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a4d395824ecc382f392e015a34e8f5c6a" name="a4d395824ecc382f392e015a34e8f5c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d395824ecc382f392e015a34e8f5c6a">&#9670;&#160;</a></span>atenderCliente()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void atenderCliente </td>
+          <td>(</td>
+          <td class="paramtype">queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>clientesEspera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>historialAtendidos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atiende al primer cliente de la cola y lo guarda en el historial. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientesEspera</td><td>Cola de clientes en espera. </td></tr>
+    <tr><td class="paramname">historialAtendidos</td><td>Vector con los clientes ya atendidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
@@ -159,8 +199,113 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Funcion principal del programa. </p>
-<p>Permite registrar clientes, consultar la fila de espera, atender clientes y almacenar un historial de atendidos.</p>
+<p>Controla el menu principal y permite seleccionar las distintas operaciones del sistema.</p>
 <dl class="section return"><dt>Returns</dt><dd>0 si el programa finaliza correctamente. </dd></dl>
+
+</div>
+</div>
+<a id="a9a206e6dbaa92764d6197d5fc8bfa47a" name="a9a206e6dbaa92764d6197d5fc8bfa47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a206e6dbaa92764d6197d5fc8bfa47a">&#9670;&#160;</a></span>mostrarClientesEspera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarClientesEspera </td>
+          <td>(</td>
+          <td class="paramtype">const queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>clientesEspera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra todos los clientes que permanecen en espera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientesEspera</td><td>Cola de clientes en espera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8365bc68f9d39de6307c2bd59ecbfc91" name="a8365bc68f9d39de6307c2bd59ecbfc91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8365bc68f9d39de6307c2bd59ecbfc91">&#9670;&#160;</a></span>mostrarHistorial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void mostrarHistorial </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>historialAtendidos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra el historial de clientes atendidos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">historialAtendidos</td><td>Vector que almacena los clientes atendidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a943cf57acd8c7a171b1f0492bcceadd1" name="a943cf57acd8c7a171b1f0492bcceadd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a943cf57acd8c7a171b1f0492bcceadd1">&#9670;&#160;</a></span>registrarCliente()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registrarCliente </td>
+          <td>(</td>
+          <td class="paramtype">queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>clientesEspera</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>siguienteTurno</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registra un nuevo cliente y lo agrega a la cola de espera. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientesEspera</td><td>Cola de clientes en espera. </td></tr>
+    <tr><td class="paramname">siguienteTurno</td><td>Numero de turno que sera asignado. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab620b80c78cbfa2ba5415a7e5a72b8fd" name="ab620b80c78cbfa2ba5415a7e5a72b8fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab620b80c78cbfa2ba5415a7e5a72b8fd">&#9670;&#160;</a></span>verSiguienteCliente()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verSiguienteCliente </td>
+          <td>(</td>
+          <td class="paramtype">const queue&lt; <a class="el" href="class_cliente.html">Cliente</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>clientesEspera</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Muestra al primer cliente de la cola sin eliminarlo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clientesEspera</td><td>Cola de clientes en espera. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
