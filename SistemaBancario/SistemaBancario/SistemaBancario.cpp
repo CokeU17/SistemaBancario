@@ -85,8 +85,26 @@ int main()
         }
 
         case 2:
-            cout << "Opcion seleccionada: Ver siguiente cliente." << endl;
+        {
+            if (clientesEspera.empty())
+            {
+                cout << "No hay clientes en espera." << endl;
+            }
+            else
+            {
+                Cliente siguienteCliente = clientesEspera.front();
+
+                cout << "====================================" << endl;
+                cout << "          SIGUIENTE CLIENTE          " << endl;
+                cout << "====================================" << endl;
+
+                cout << "Turno: " << siguienteCliente.turno << endl;
+                cout << "Nombre: " << siguienteCliente.nombre << endl;
+                cout << "Tramite: " << siguienteCliente.tramite << endl;
+            }
+
             break;
+        }
 
         case 3:
             cout << "Opcion seleccionada: Atender siguiente cliente." << endl;
